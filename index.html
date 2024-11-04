@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nenad Matijević 🎯</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/portfolio-icon.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <nav class="nav" id="nav" data-is-target="true">
+      <button class="hamburger" id="hamburger">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+      <ul class="nav__list" id="nav-list">
+        <li class="nav__list-item">
+          <a href="#home" name="home">Home</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#about" name="about">About</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#projects" name="projects">Projects</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#contact" name="contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="section header" id="home">
+      <div class="particles" id="particles-home-js"></div>
+      <div class="header__left">
+        <h1 class="header__left-heading">
+          Hi, <span class="span">I'm <span class="name">Nenad</span>,</span>
+          <span class="span">Software Developer. I do</span>
+          <span id="typed-element"></span>
+        </h1>
+      </div>
+      <div class="header__right">
+        <figure class="header__right-img">
+          <img
+            class="image"
+            src="./assets/profile.jpg"
+            alt="Nenad Matijevic - Profile Photo"
+          />
+        </figure>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section about" id="about">
+        <div class="particles" id="particles-about-js"></div>
+        <div class="about__left">
+          <p>
+            I'm a Mechanical Engineering graduate with a strong passion for
+            software development. Although my background is in engineering, I’ve
+            spent considerable time honing my skills in programming and building
+            applications. My expertise spans various technologies, and I enjoy
+            creating efficient, user-friendly solutions. I'm constantly learning
+            and eager to contribute to innovative projects that make a
+            difference.
+          </p>
+        </div>
+        <div class="about__right">
+          <h3>Tools & Technologies</h3>
+          <div class="tools" id="tools"></div>
+        </div>
+      </section>
+      <section class="section projects" id="projects">
+        <div class="particles" id="particles-projects-js"></div>
+        <ul class="projects__list" id="projects-list"></ul>
+      </section>
+    </main>
+    <footer class="section footer" id="contact">
+      <div class="footer__contact">
+        <h6>Contact me</h6>
+        <ul class="contacts" id="contacts"></ul>
+      </div>
+      <p class="copyright">
+        I created this portfolio entirely on my own using HTML, CSS & JS, making
+        it a part of my independent work as well.
+        <span id="year"></span>
+      </p>
+    </footer>
+  </body>
+</html>
