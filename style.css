@@ -18,6 +18,17 @@ body {
   background-color: var(--DARK-BG);
 }
 
+.section {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .nav {
   background-color: rgba(15, 15, 15, 0.9);
   position: sticky;
@@ -333,7 +344,7 @@ body {
 
   .nav__list.show {
     display: flex;
-    max-height: 300px
+    max-height: 300px;
   }
 
   .header {

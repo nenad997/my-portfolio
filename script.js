@@ -64,6 +64,25 @@ function activateSection() {
 
 window.addEventListener("scroll", activateSection);
 
+window.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    threshold: 0.2,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+});
+
 hamburgerElement.addEventListener("click", () => {
   navList.classList.toggle("show");
 });
