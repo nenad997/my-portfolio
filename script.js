@@ -219,7 +219,7 @@ const contacts = [
     getMediaLogoPath("github"),
     "https://github.com/nenad997"
   ),
-  new Contact("CV", getMediaLogoPath("cv"), "./assets/Nenad_Matijevic_CV.pdf"),
+  new Contact("CV", getMediaLogoPath("cv"), "./assets/CV.pdf"),
 ];
 
 contacts.forEach((contact) => {
