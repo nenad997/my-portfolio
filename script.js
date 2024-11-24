@@ -16,25 +16,19 @@ const typed = new Typed("#typed-element", {
 particlesJS.load(
   "particles-home-js",
   "./assets/particles-home.json",
-  function () {
-    console.log("callback - particles-home.json config loaded");
-  }
+  function () {}
 );
 
 particlesJS.load(
   "particles-about-js",
   "./assets/particles-about.json",
-  function () {
-    console.log("callback - particles-about.json config loaded");
-  }
+  function () {}
 );
 
 particlesJS.load(
   "particles-projects-js",
   "./assets/particles-projects.json",
-  function () {
-    console.log("callback - particles-projects.json config loaded");
-  }
+  function () {}
 );
 
 function toggleLinkClass(sectionId) {

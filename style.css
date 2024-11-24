@@ -60,6 +60,8 @@ body {
 }
 
 .nav__list-item {
+  transition: all .2s ease;
+
   & a {
     color: white;
     font-size: 2.2rem;
@@ -70,6 +72,13 @@ body {
   & a.active {
     color: red;
   }
+
+  & a:hover {
+  }
+}
+
+.nav__list-item:hover {
+  transform: translateY(-3px);
 }
 
 .header {
@@ -137,6 +146,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 5rem;
   padding: 5rem;
   border-bottom: 5px solid rgb(45, 46, 45);
 }
@@ -145,13 +155,17 @@ body {
   flex: 1;
   padding: 2rem;
   z-index: 3;
+  background-color: rgba(58, 57, 56, 0.4);
+  border-radius: 1.5rem;
+  padding: 0.2rem;
 
   & p {
     font-size: 3rem;
     color: white;
     text-align: justify;
     letter-spacing: 1px;
-    line-height: 1.3;
+    line-height: 1.35;
+    padding: 1rem;
   }
 }
 
@@ -160,7 +174,11 @@ body {
   z-index: 3;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3rem;
+  background-color: rgba(58, 57, 56, 0.4);
+  border-radius: 1.5rem;
+  padding: 1rem;
 
   & h3 {
     text-align: center;
@@ -175,7 +193,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  background-color: rgba(58, 57, 56, 0.4);
+
   padding: var(--PADDING-MEDIUM);
 
   & .tool {
@@ -223,6 +241,7 @@ body {
   line-height: 1.5;
   background-color: rgba(58, 57, 56, 0.4);
   padding: var(--PADDING-MEDIUM);
+  border-radius: 1rem;
 
   & h4 {
     font-size: 3.2rem;
@@ -249,6 +268,11 @@ body {
     margin: auto;
     padding: 1rem 2rem;
     border-radius: 1rem;
+  }
+
+  & a:hover {
+    background-color: #d56e20;
+    color: black;
   }
 }
 
