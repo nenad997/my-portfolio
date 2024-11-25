@@ -83,10 +83,36 @@
         <div class="particles" id="particles-projects-js"></div>
         <ul class="projects__list" id="projects-list"></ul>
       </section>
+      <section class="section contact" id="contact">
+        <div class="particles" id="particles-contact-js"></div>
+        <div class="contact-form-container">
+          <h1>Contact Me</h1>
+          <form id="contactForm">
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Unesite naslov"
+              required
+            />
+
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Unesite vašu poruku"
+              required
+            ></textarea>
+            <button type="button" onclick="sendEmail(this)">Pošalji</button>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer class="section footer" id="contact">
+    <footer class="footer">
       <div class="footer__contact">
-        <h6>Contact me</h6>
+        <h6>Follow Me</h6>
         <ul class="contacts" id="contacts"></ul>
       </div>
       <p class="copyright">

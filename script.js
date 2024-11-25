@@ -7,6 +7,8 @@ const navList = document.getElementById("nav-list");
 const sections = document.querySelectorAll(".section");
 const hamburgerElement = document.getElementById("hamburger");
 
+const myEmail = "nenad.matijevic97@hotmail.com";
+
 const typed = new Typed("#typed-element", {
   strings: ["Frontend,", "Backend,", "Mobile", "apps development"],
   typeSpeed: 230,
@@ -22,6 +24,12 @@ particlesJS.load(
 particlesJS.load(
   "particles-about-js",
   "./assets/particles-about.json",
+  function () {}
+);
+
+particlesJS.load(
+  "particles-contact-js",
+  "./assets/particles-contact.json",
   function () {}
 );
 
@@ -188,7 +196,7 @@ projects.forEach((project) => {
   projectElement.innerHTML = `
     <h4>${project.title}</h4>
     <p>${project.summary}</p>
-    <a title="${project.title}" href="${project.url}" target="_blank">
+    <a title="GitHub" href="${project.url}" target="_blank">
       See project
     </a>
   `;
@@ -239,5 +247,25 @@ contacts.forEach((contact) => {
 });
 
 yearSpanElement.textContent = `Nenad Matijević - @${new Date().getFullYear()}`;
+
+function sendEmail(button) {
+  const contactForm = button.closest("form");
+
+  const subjectEl = contactForm.querySelector("#subject");
+  const messageEl = contactForm.querySelector("#message");
+
+  const enteredSubject = subjectEl.value;
+  const enteredMessage = messageEl.value;
+
+  if (!enteredSubject.trim() || !enteredMessage.trim()) {
+    alert("Please fill out all the fields");
+    return;
+  }
+
+  const mailtoLink = `mailto:${myEmail}?subject=${encodeURIComponent(
+    enteredSubject
+  )}&body=${encodeURIComponent(enteredMessage)}`;
+  window.location.href = mailtoLink;
+}
 
 // window.scrollTo(0, document.body.scrollHeight);

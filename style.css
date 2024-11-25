@@ -281,6 +281,76 @@ body {
   }
 }
 
+.contact {
+  min-height: 60vh;
+  border-bottom: 5px solid rgb(45, 46, 45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-container {
+  z-index: 5;
+  background-color: rgba(58, 57, 56, 0.4);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #d56e20;
+  font-weight: bolder;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+  font-size: 2rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #d56e20;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
 .footer {
   min-height: 40vh;
   background-color: var(--DARK-BG);
