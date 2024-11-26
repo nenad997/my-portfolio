@@ -240,6 +240,7 @@ body {
   align-items: center;
   gap: 2rem;
   max-width: 65rem;
+  width: 100%;
   line-height: 1.5;
   background-color: rgba(58, 57, 56, 0.4);
   padding: var(--PADDING-MEDIUM);
