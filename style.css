@@ -300,6 +300,11 @@ body {
   width: 100%;
 }
 
+.btn-disabled {
+  cursor: not-allowed;
+  background-color: #4c8bcf;
+}
+
 .contact-form-container h1 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -346,10 +351,6 @@ form button {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #0056b3;
 }
 
 .footer {

@@ -258,6 +258,9 @@ function sendEmail(button) {
   const enteredMessage = messageEl.value;
 
   if (!enteredSubject.trim() || !enteredMessage.trim()) {
+    button.setAttribute("disabled", "true");
+    button.classList.add("btn-disabled");
+
     Toastify({
       text: "Please fill out all the fields",
       duration: 3000,
@@ -270,10 +273,16 @@ function sendEmail(button) {
       style: {
         background: "#af1c1c",
         fontSize: "1.8rem",
-        color: "white"
+        color: "white",
       },
       onClick: function () {}, // Callback after click
     }).showToast();
+
+    setTimeout(() => {
+      button.removeAttribute("disabled");
+      button.classList.remove("btn-disabled");
+    }, 3000);
+
     return;
   }
 
