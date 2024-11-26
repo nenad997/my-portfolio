@@ -138,9 +138,9 @@ const tools = [
   new Tool("NestJS", getLogoPath("nestjs"), "NestJS Logo"),
   new Tool("SQL", getLogoPath("sql"), "SQL Logo"),
   new Tool("MongoDB", getLogoPath("mongodb"), "MongoDB Logo"),
-  new Tool("C#", getLogoPath("csharp"), "C# Logo"),
-  new Tool("Java", getLogoPath("java"), "Java Logo"),
-  new Tool("ASP.NET", getLogoPath("dotnet"), ".Net Logo"),
+  // new Tool("C#", getLogoPath("csharp"), "C# Logo"),
+  // new Tool("Java", getLogoPath("java"), "Java Logo"),
+  // new Tool("ASP.NET", getLogoPath("dotnet"), ".Net Logo"),
   new Tool("Jest Testing Library", getLogoPath("jest"), "Jest Logo"),
 ];
 
