@@ -10,8 +10,11 @@ const hamburgerElement = document.getElementById("hamburger");
 const myEmail = "nenad.matijevic97@hotmail.com";
 
 const typed = new Typed("#typed-element", {
-  strings: ["Frontend,", "Backend,", "Mobile", "apps development"],
-  typeSpeed: 230,
+  strings: ["Frontend,", "Backend,", "Mobile apps development"],
+  typeSpeed: 50,
+  backSpeed: 50,
+  backDelay: 1000,
+  startDelay: 500,
   loop: true,
 });
 
@@ -68,7 +71,7 @@ window.addEventListener("scroll", activateSection);
 
 window.addEventListener("DOMContentLoaded", () => {
   const observerOptions = {
-    threshold: 0.2,
+    threshold: 0.1,
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
@@ -87,6 +90,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
 hamburgerElement.addEventListener("click", () => {
   navList.classList.toggle("show");
+});
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    if (navList.classList.contains("show")) {
+      navList.classList.remove("show");
+    }
+  });
 });
 
 class Tool {
@@ -130,7 +141,7 @@ const tools = [
   new Tool("JavaScript", getLogoPath("javascript"), "JS Logo"),
   new Tool("TypeScript", getLogoPath("typescript"), "TS Logo"),
   new Tool("React", getLogoPath("reactjs"), "React Logo"),
-  new Tool("Next.js", getLogoPath("nextjs"), "NextJS Logo"),
+  // new Tool("Next.js", getLogoPath("nextjs"), "NextJS Logo"),
   new Tool("React Native", getLogoPath("reactnative"), "React Native Logo"),
   new Tool("Redux.js", getLogoPath("redux"), "Redux.js Logo"),
   new Tool("NodeJS", getLogoPath("nodejs"), "NodeJS Logo"),
@@ -197,7 +208,7 @@ projects.forEach((project) => {
     <h4>${project.title}</h4>
     <p>${project.summary}</p>
     <a title="GitHub" href="${project.url}" target="_blank">
-      See project
+      Source Code
     </a>
   `;
 

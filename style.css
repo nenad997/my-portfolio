@@ -24,7 +24,7 @@ body {
 .section {
   opacity: 0;
   transform: translateY(2rem);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .section.animate {
@@ -47,11 +47,14 @@ body {
   border: none;
   cursor: pointer;
   z-index: 10;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
 
 .hamburger__line {
-  width: 30px;
-  height: 3px;
+  width: 50px;
+  height: 5px;
   background-color: white;
 }
 
@@ -107,7 +110,6 @@ body {
 .header__left-heading {
   color: white;
   font-size: 6rem;
-  white-space: wrap;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -434,11 +436,36 @@ form button {
   .nav__list {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 0;
     background-color: rgb(15, 15, 15);
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    transition: max-height 0.4s ease;
+    transition: all 0.4s ease;
+    animation: animateNavHeight .4s ease-in-out;
+  }
+
+  @keyframes animateNavHeight {
+    0% {
+      height: 0;
+    }
+
+    30% {
+      height: 30vh;
+    }
+
+    60% {
+      height: 70vh;
+    }
+
+    100% {
+      height: 100vh;
+    }
+  }
+
+  .nav__list-item a {
+    font-size: 3.2rem;
   }
 
   .hamburger {
@@ -447,7 +474,7 @@ form button {
 
   .nav__list.show {
     display: flex;
-    max-height: 300px;
+    height: 100vh;
   }
 
   .header {
@@ -457,7 +484,7 @@ form button {
   }
 
   .header__left-heading {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
 
   .header__right-img {
@@ -560,21 +587,27 @@ form button {
 
 @media (min-width: 481px) and (max-width: 768px) {
   .nav {
-    padding: var(--PADDING-BIG);
+    padding: 0;
   }
 
   .header {
     flex-direction: column;
-    justify-content: center;
-    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 4rem;
   }
 
   .header__left-heading {
-    font-size: 0.5rem;
+    font-size: 5rem;
   }
 
   .header__right-img {
     max-width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    width: 80rem;
+    padding: 1rem;
   }
 
   .about {
@@ -584,18 +617,20 @@ form button {
 
   .about__left {
     padding: 0;
+    display: flex;
+    align-items: center;
 
     & p {
-      font-size: 0.6rem;
+      font-size: 2rem;
     }
   }
 
   .about__right {
-    gap: 0;
-    justify-content: center;
+    gap: 1.2rem;
+    justify-content: space-around;
 
     & h3 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
 
@@ -607,8 +642,90 @@ form button {
 
       & .logo {
         width: 6rem;
-        height: 3rem;
+        height: 4rem;
       }
     }
+  }
+}
+
+@media (max-width: 481px) {
+  .header__left-heading {
+    font-size: 5rem;
+  }
+
+  .header__right-img {
+    width: 50em;
+  }
+
+  .about__left {
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    & p {
+      font-size: 2rem;
+    }
+  }
+
+  .about__right {
+    gap: 1rem;
+    justify-content: space-around;
+
+    & h3 {
+      font-size: 3rem;
+      display: flex;
+    }
+  }
+
+  .tools {
+    & .tool {
+      & .logo {
+        width: 6rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  .projects {
+    position: relative;
+    overflow: hidden;
+    min-height: 75vh;
+    padding: 1rem 0;
+    border-bottom: 5px solid rgb(45, 46, 45);
+  }
+
+  .projects__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .projects__list-item {
+    & h4 {
+      font-size: 2.3rem;
+    }
+
+    & p {
+      font-size: 2rem;
+    }
+
+    & a {
+      font-size: 1.5rem;
+    }
+
+    & a:hover {
+      background-color: #d56e20;
+      color: black;
+    }
+  }
+
+  .footer__contact h6 {
+    font-size: 2rem;
+  }
+
+  .copyright {
+    font-size: 2rem;
   }
 }
