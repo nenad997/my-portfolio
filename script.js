@@ -71,7 +71,7 @@ window.addEventListener("scroll", activateSection);
 
 window.addEventListener("DOMContentLoaded", () => {
   const observerOptions = {
-    threshold: 0.1,
+    threshold: 0.2,
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
@@ -238,7 +238,7 @@ const contacts = [
     getMediaLogoPath("github"),
     "https://github.com/nenad997"
   ),
-  new Contact("CV", getMediaLogoPath("cv"), "./assets/CV.pdf"),
+  // new Contact("CV", getMediaLogoPath("cv"), "./assets/CV.pdf"),
 ];
 
 contacts.forEach((contact) => {
